@@ -13,5 +13,14 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Coze 实时对话 SDK -->
+<script src="https://sf-cdn.coze.cn/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.8/libs/oversea/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    botId: '7538276269454442762',
+    userId: 'visitor-' + Math.random().toString(36).substr(2, 9),
+    root: document.body            // 如果想指定容器，把 document.body 换成对应 div 的 id
+  });
+</script>
   </body>
 </html>
